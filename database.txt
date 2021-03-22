@@ -1,0 +1,22 @@
+ledDesligado-LEDQueimado
+ledDesligado-fonteQueimada
+iniciadoProcesso-LEDQueimado
+naoIniciadoProcesso-fonteQueimada
+iniciadoProcesso-trocarDisplay
+iniciadoProcesso-trocarPlaca
+iniciadoProcesso-trocarResistencia
+iniciadoProcesso-trocarSensoresDefeituosos
+iniciadoProcesso-sujeiraMangueiraseCanos
+iniciadoProcesso-problemaBombaAgua
+naoIniciadoProcesso-entao Inicie o processo
+naoIniciadoProcesso-trocarPlaca
+naoIniciadoProcesso-trocarSensoresDefeituosos
+sugaAgua-trocarDisplay
+sugaAgua-trocarResistencia
+sugaAgua-trocarPlaca
+sugaAgua-trocarSensoresDefeituosos
+fluxoAgua-problemaBombaAgua
+estaAquecendo-trocarSensoresDefeituosos
+estaAquecendo-trocarPlaca
+realizaProcessoCompleto-trocarDisplay
+sensoresNaofunciona-trocarPlaca

@@ -3,17 +3,17 @@ class Diagnostico():
 	def __init__(self):
 		self.resultado = ['LEDQueimado',
 						  'fonteQueimada',
-						  'problemaSensores',
-						  'problemaDisplay',
-						  'problemaPlaca',
-						  'problemaResistencia',
-						  'sensores',
+						  'trocarSensoresDefeituosos',
+						  'trocarDisplay',
+						  'trocarPlaca',
+						  'trocarResistencia',
+						  'entao Inicie o processo',
 						  'problemaBombaAgua',
-						  'sujeiraMangueiras']
+						  'sujeiraMangueiraseCanos']
 		self.db = []
-		# abre o arquivo db2.txt em modo leitura e passa os dados para
+		# abre o arquivo database.txt em modo leitura e passa os dados para
 		# uma lista de listas de str
-		arquivo = open('db_dois.txt','r')
+		arquivo = open('database.txt','r')
 		for linha in arquivo:
 			if linha[len(linha) - 1] == '\n':
 				linha = linha.replace("\n", "")
@@ -32,9 +32,9 @@ class Diagnostico():
 			return 0
 
 	# verifica se diagnóstico pensado tem a caracteristica passada por parametro
-	def busca(self, familiar, caract):	
+	def busca(self, problema, caract):
 		for i in range(len(self.db)):
-			if familiar == self.db[i][1]:
+			if problema == self.db[i][1]:
 				if self.db[i][0] == caract:
 					return True
 		return False				
@@ -67,3 +67,7 @@ class Diagnostico():
 			self.excluiquemnaoe(caract)
 		elif resp.upper() == 'N':
 			self.excluiqueme(caract)
+		elif resp == '':
+			raise Exception("Informe uma resposta!")
+		else:
+			raise Exception("Resposta errada!")

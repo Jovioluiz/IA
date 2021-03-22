@@ -1,0 +1,39 @@
+Casos de Testes
+
+Teste 1
+Possui algum LED desligado?
+S
+O processo foi inicializado?
+N
+
+Teste 2
+Possui algum LED desligado?
+S
+O processo foi inicializado?
+S
+
+Teste 3
+Possui algum LED desligado?
+N
+O processo foi inicializado?
+S
+Suga água do reservatório no inicio do processo?
+N
+O fluxo de água dentro dos canos e mangueiras está normal?
+N
+
+Teste 4
+Possui algum LED desligado?
+N
+O processo foi inicializado?
+S
+Suga água do reservatório no inicio do processo?
+S
+O fluxo de água dentro dos canos e mangueiras está normal?
+N
+Realiza o processo completo?
+N
+Recepiente está aquecendo?
+S
+Sensores de temperatura e pressão estão funcionando corretamente?
+N

@@ -2,8 +2,8 @@
 #from classPerguntas import *
 
 #Inferência
-from trunk.classDiagnostico import *
-from trunk.classPerguntas import *
+from classDiagnostico import *
+from classPerguntas import *
 
 se = Diagnostico()
 pergunta = Pergunta()
