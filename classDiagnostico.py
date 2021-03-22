@@ -1,9 +1,15 @@
 class Diagnostico():
 	# metodo construtor
 	def __init__(self):
-		self.resultado = ['estressado', 'faminto', 'saudavel','com_calor','cansado','machucado','bem_alimentado','com_frio','deprimido','nao_movimenta',
-						  'tosse','febre', 'dificuldade_respirar']
-		self.animal = []
+		self.resultado = ['LEDQueimado',
+						  'fonteQueimada',
+						  'problemaSensores',
+						  'problemaDisplay',
+						  'problemaPlaca',
+						  'problemaResistencia',
+						  'sensores',
+						  'problemaBombaAgua',
+						  'sujeiraMangueiras']
 		self.db = []
 		# abre o arquivo db2.txt em modo leitura e passa os dados para
 		# uma lista de listas de str
@@ -55,22 +61,9 @@ class Diagnostico():
 		for i in range(count):
 			self.resultado.remove(lista[i])
 		
-	def pergunta(self,pergunta,caract):
+	def pergunta(self, pergunta, caract):
 		resp = input(pergunta + ': ')
 		if resp.upper() == 'S':
 			self.excluiquemnaoe(caract)
 		elif resp.upper() == 'N':
 			self.excluiqueme(caract)
-
-"""
-'O animal está agitado?'			->		'agitado'
-'O animal está comendo bem?'		->		'alimentado'
-'O animal está calmo?'				->		'calmo'
-'O ambiente é adequado?'			->	'ambiente_adequado'
-'O animal não se alimentou?' 		-> 	'doente'
-'O animal está com tosse?'			->	'doente'
-'O animal está com febre?'			->	'doente'
-'O animal está com dificuldade respirar?'	->	'doente'
-'O animal não está se movimentando?'	->	'n_movimenta'
-
-"""
