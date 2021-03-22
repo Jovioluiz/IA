@@ -1,5 +1,5 @@
-#from classDiagnostico import *
-#from classPerguntas import *
+from classDiagnostico import *
+from classPerguntas import *
 
 #Inferência
 from classDiagnostico import *

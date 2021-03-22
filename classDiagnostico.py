@@ -5,9 +5,9 @@ class Diagnostico():
 						  'fonteQueimada',
 						  'trocarSensoresDefeituosos',
 						  'trocarDisplay',
+						  'trocarPainel',
 						  'trocarPlaca',
 						  'trocarResistencia',
-						  'entao Inicie o processo',
 						  'problemaBombaAgua',
 						  'sujeiraMangueiraseCanos']
 		self.db = []
@@ -60,14 +60,22 @@ class Diagnostico():
 				count = count + 1
 		for i in range(count):
 			self.resultado.remove(lista[i])
+
+	# Mantêm um parâmetro no resultado idependente da resposta da pergunta
+	def excessao(self, atributo):
+		self.resultado.append(atributo)
 		
 	def pergunta(self, pergunta, caract):
 		resp = input(pergunta + ': ')
 		if resp.upper() == 'S':
-			self.excluiquemnaoe(caract)
+			self.excluiquemnaoe(caract)	
 		elif resp.upper() == 'N':
 			self.excluiqueme(caract)
 		elif resp == '':
 			raise Exception("Informe uma resposta!")
 		else:
-			raise Exception("Resposta errada!")
+			raise Exception("Resposta errada! Informe S para sim e N para não.")
+
+	#Pergunta que possui o parametro com excessão		
+		if pergunta == 'Suga água do reservatório no inicio do processo?' and resp.upper() == 'S':
+			self.excessao('sujeiraMangueiraseCanos')
