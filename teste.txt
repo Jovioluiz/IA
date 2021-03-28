@@ -2,7 +2,7 @@ Casos de Testes
 
 Teste 1
 Possui algum LED desligado?
-S
+N
 O processo foi inicializado?
 N
 
@@ -22,6 +22,7 @@ N
 O fluxo de água dentro dos canos e mangueiras está normal?
 N
 
+
 Teste 4
 Possui algum LED desligado?
 N
@@ -30,10 +31,24 @@ S
 Suga água do reservatório no inicio do processo?
 S
 O fluxo de água dentro dos canos e mangueiras está normal?
-N
+S
 Realiza o processo completo?
 N
 Recepiente está aquecendo?
 S
 Sensores de temperatura e pressão estão funcionando corretamente?
+N
+
+Teste 5
+Possui algum LED desligado?
+N
+O processo foi inicializado?
+S
+Suga água do reservatório no inicio do processo?
+S
+O fluxo de água dentro dos canos e mangueiras está normal?
+S
+Realiza o processo completo?
+N
+Recepiente está aquecendo?
 N
