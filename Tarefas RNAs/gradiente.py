@@ -6,7 +6,6 @@ import numpy as np
 def sigmoid(x):
     return 1/(1 + np.exp(-x))
 
-
 def sigmoid_prime(x):
     #derivada da função sigmoide
     return sigmoid(x) * (1-sigmoid(x))
@@ -14,8 +13,8 @@ def sigmoid_prime(x):
 #taxa de aprendizado
 learnrate = 0.5
 
-x = np.array([1,2,3,4])
-y = np.array([0.5])
+x = np.array([1, 2, 3, 4])
+y = np.array([0.5])#erro
 bies = 0.5
 
 #pesos iniciais

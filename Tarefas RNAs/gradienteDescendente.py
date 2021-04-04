@@ -16,51 +16,33 @@ def sigmoid_prime(x):
 learnrate = 0.5
 
 x = np.array([1, 2, 3, 4])
-y = np.array([0.5])
+y = np.array([0.5])#valor esperado
 bies = 0.5
 
 #pesos iniciais
-w = np.array([0.5, -0.5, 0.3, 0.1])
+w = np.random.randn(4)/10
 
-#calculo da combinação linear de entrada dos pesos do nó
-h = np.dot(x, w) + bies
+epocas = 100
 
-nn_output = sigmoid(h)
-print('Output da rede inicial: {}' .format(nn_output))
+del_w = 0
 
-#erro calcular de rede neural
-error = y - nn_output
-print('Erro Inicial: {}'.format(error))
+for e in range(epocas):
+    h = np.dot(x, w) + bies
+    nn_output = sigmoid(h)
 
-#calcular termo do erro
-erro_term = error * sigmoid_prime(h)
-print('Termo de erros inicial: {}'.format(erro_term))
+    #erro calcular de rede neural
+    error = y - nn_output
 
-print('Peso Inicial: {}'.format(w) + '\n')
+    #calcular termo do erro
+    erro_term = error * sigmoid_prime(h)
 
-#calcule a mudança nos pesos
-del_w = learnrate * erro_term * x
+    #atualizando o passo
+    del_w = learnrate * erro_term * x
 
-#aplicando os novos pesos
-w = w + del_w
+    #aplicando os novos pesos
+    w = w + del_w
 
-h = np.dot(x, w) + bies
-nn_output = sigmoid(h)
-
-#erro calcular de rede neural
-error = y - nn_output
-
-#calcular termo do erro
-erro_term = error * sigmoid_prime(h)
-
-#atualizando o passo
-del_w = learnrate * erro_term * x
-
-#aplicando os novos pesos
-w = w + del_w
-
-print('Output da rede: {}' .format(nn_output))
-print('Erro do Output: {}'.format(error))
-print('Termo de erro: {}'.format(erro_term))
-print('Novos Pesos: {}' .format(w))
-print('Passos: {}' .format(del_w))
+    print('Saída da rede: {}' .format(nn_output))
+    print('Erro: {}'.format(error))
+    if nn_output == 0.5:
+        break
