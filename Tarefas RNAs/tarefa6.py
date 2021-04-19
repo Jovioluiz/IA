@@ -111,6 +111,7 @@ MSE_Output1 = 0
 MSE_Output2 = 0
 RMSE_Output1 = 0
 RMSE_Output2 = 0
+predictions = 0
 
 for xi, yi in zip(x_test.values, y_test.values):
     # Forward Pass
@@ -133,6 +134,15 @@ for xi, yi in zip(x_test.values, y_test.values):
     MSE_Output1 += (yi[0] - output[0]) ** 2
     MSE_Output2 += (yi[1] - output[1]) ** 2
 
+    if (output[0] > output[1]):
+        if (yi[0] > yi[1]):
+            predictions += 1
+
+    if (output[1] >= output[0]):
+        if (yi[1] > yi[0]):
+            predictions += 1
+
+print("A Acurácia da Predição é de: {:.3f}".format(predictions / n_records))
 # Erro Quadrático Médio
 MSE_Output1 /= n_records
 MSE_Output2 /= n_records
