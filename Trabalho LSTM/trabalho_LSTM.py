@@ -18,7 +18,7 @@ fig = go.Figure(data=[go.Candlestick(x=DataSet['Date'],
 fig.update_layout(xaxis_rangeslider_visible=False)
 # fig.show()
 
-DataSet=pd.read_csv('cotacao_ouro_ult_5_anos.csv')
+DataSet=pd.read_csv('cotacao_ouro_treino2.csv')
 DataSet=DataSet.dropna()
 DataSet.head()
 
@@ -31,8 +31,6 @@ plt.show()
 base_treinamento = DataSet.iloc[:, 1:2].values
 
 #DataSet.drop(['Date','Close','High','Low', 'Volume'],axis=1,inplace=True)
-
-# print(base_treinamento)
 
 from sklearn.preprocessing import MinMaxScaler
 scaler=MinMaxScaler(feature_range=(0, 1))
