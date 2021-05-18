@@ -130,5 +130,3 @@ plt.xlabel('Tempo')
 plt.ylabel('Valor')
 plt.legend()
 plt.show()
-
-np.shape(previsoes)
